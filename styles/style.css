@@ -240,10 +240,9 @@ body #wrap section#header .header-wrap .form {
   background: white;
   border-radius: 10px;
   overflow: hidden;
-  z-index: 10000;
-  margin-right: -500px;
+  z-index: 100;
 }
-/* line 250, ../sass/style.scss */
+/* line 249, ../sass/style.scss */
 body #wrap section#header .header-wrap .form .form-head {
   display: block;
   height: 30px;
@@ -256,23 +255,23 @@ body #wrap section#header .header-wrap .form .form-head {
   letter-spacing: 0.01em;
   padding-right: 6px;
 }
-/* line 263, ../sass/style.scss */
+/* line 262, ../sass/style.scss */
 body #wrap section#header .header-wrap .form p {
   padding: 7px 0 0 10px;
   font-size: 12px;
   line-height: 15px;
   letter-spacing: 0.022em;
 }
-/* line 270, ../sass/style.scss */
+/* line 269, ../sass/style.scss */
 body #wrap section#header .header-wrap .form form {
   padding-top: 6px;
 }
-/* line 273, ../sass/style.scss */
+/* line 272, ../sass/style.scss */
 body #wrap section#header .header-wrap .form form .obligatory {
   position: relative;
   padding-right: 45px;
 }
-/* line 277, ../sass/style.scss */
+/* line 276, ../sass/style.scss */
 body #wrap section#header .header-wrap .form form .obligatory input {
   position: relative;
   margin: 0 29px;
@@ -285,11 +284,11 @@ body #wrap section#header .header-wrap .form form .obligatory input {
   margin-top: 24px;
   padding-left: 0px;
 }
-/* line 291, ../sass/style.scss */
+/* line 290, ../sass/style.scss */
 body #wrap section#header .header-wrap .form form .obligatory:first-child input {
   margin-top: 0;
 }
-/* line 295, ../sass/style.scss */
+/* line 294, ../sass/style.scss */
 body #wrap section#header .header-wrap .form form .obligatory:after {
   position: absolute;
   content: '*';
@@ -298,11 +297,11 @@ body #wrap section#header .header-wrap .form form .obligatory:after {
   bottom: -5px;
   left: 15px;
 }
-/* line 304, ../sass/style.scss */
+/* line 303, ../sass/style.scss */
 body #wrap section#header .header-wrap .form form .not-obligatory {
   padding: 13px 30px;
 }
-/* line 307, ../sass/style.scss */
+/* line 306, ../sass/style.scss */
 body #wrap section#header .header-wrap .form form .not-obligatory label {
   line-height: 20px;
   font-size: 12px;
@@ -310,7 +309,7 @@ body #wrap section#header .header-wrap .form form .not-obligatory label {
   margin: 0;
   padding: 0;
 }
-/* line 315, ../sass/style.scss */
+/* line 314, ../sass/style.scss */
 body #wrap section#header .header-wrap .form form .not-obligatory textarea {
   margin: 0;
   padding: 0;
@@ -320,7 +319,7 @@ body #wrap section#header .header-wrap .form form .not-obligatory textarea {
   background: rgba(159, 159, 159, 0.7);
   resize: none;
 }
-/* line 326, ../sass/style.scss */
+/* line 325, ../sass/style.scss */
 body #wrap section#header .header-wrap .form form input[type=submit] {
   border: none;
   background: black;
@@ -334,24 +333,21 @@ body #wrap section#header .header-wrap .form form input[type=submit] {
   text-transform: uppercase;
   font-weight: 700;
 }
-/* line 342, ../sass/style.scss */
+/* line 341, ../sass/style.scss */
 body #wrap section#header .header-wrap #feedback {
   display: none;
 }
-/* line 346, ../sass/style.scss */
+/* line 345, ../sass/style.scss */
 body #wrap section#header .header-wrap #feedback:checked + .form {
-  animation: bounceInRight 1s forwards;
-  margin-right: 0;
+  display: block;
 }
-/* line 351, ../sass/style.scss */
+/* line 349, ../sass/style.scss */
 body #wrap section#header .header-wrap #feedback:not(:checked) + .form {
-  animation: bounceOutRight 1s forwards;
-  margin-right: -500px;
-  transition: 10s;
+  display: none;
 }
 
 /*MIN-WIDTH FIXED*/
-/* line 362, ../sass/style.scss */
+/* line 358, ../sass/style.scss */
 .container {
   min-width: 1200px;
 }

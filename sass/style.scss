@@ -1,360 +1,762 @@
+$min-width: 1200px;
+
 body {
     padding: 0;
     margin: 0;
+    font-family: 'Aeroport';
+    font-weight: normal;
+    font-style: normal;
 
-    #wrap {
+    $section-height: 705px;
 
-        section#header {
-            min-width: 1200px;
-            overflow: hidden;
+    section:not(#header) {
+        min-width: $min-width;
+        position: relative;
+        background: white;
+        height: $section-height;
+        width: 100%;
+        padding-bottom: 0px;
 
-            .nav-wrap {
-                background: black;
-                width: 100%;
+        h2.header {
+            position: relative;
+            background: yellow;
+            width: 320px;
+            height: 45px;
+            position: absolute;
+            top: 15px;
+            left: 0;
+            text-transform: uppercase;
+            font-size: 22px;
+            text-align: right;
+            line-height: 45px;
+            padding-right: 60px;
+            background: black;
+            color: white;
+            font-weight: 100;
+        }
+
+        h2:after {
+            position: absolute;
+            top: 0;
+            right: 100%;
+            content: '';
+            display: block;
+            height: 45px;
+            width: 500px;
+            background: black;
+        }
+
+        h2:before {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            right: -25px;
+            transform: rotate(-40deg);
+            width: 100px;
+            height: 7px;
+            background: white;
+        }
+
+        .container:before {
+            content: '';
+            display: block;
+            position: absolute;
+            right: 140px;
+            width: 100px;
+            height: $section-height - 5px;
+            background-image: url(../images/background-logo.png);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.2;
+        }
+    }
+
+    section#header {
+        min-width: 1200px;
+        overflow: hidden;
+
+        .nav-wrap {
+            background: black;
+            width: 100%;
+            height: 83px;
+            line-height: 83px;
+
+            #logo {
+                display: block;
+                width: 300px;
                 height: 83px;
-                line-height: 83px;
+                float: left;
+                margin-left: 9px;
 
-                #logo {
-                    display: block;
-                    width: 300px;
-                    height: 83px;
-                    float: left;
-                    margin-left: 9px;
+                background-color: black;
+                background-image: url(../images/home/logo.png);
+                background-repeat: no-repeat;
+                background-size: 250px;
+                background-position: center;
+            }
 
-                    background-color: black;
-                    background-image: url(../images/home/logo.png);
-                    background-repeat: no-repeat;
-                    background-size: 250px;
-                    background-position: center;
+            .nav {
+                float: left;
+                text-transform: uppercase;
+                padding-left: 20px;
+
+                li {
+
+                    a {
+                        display: block;
+                        margin-left: 0px;
+                        padding: 0 13.5px;
+                        color: white;
+                        font-size: 13px;
+                        letter-spacing: -0.035em;
+                    }
                 }
+            }
 
-                .nav {
-                    float: left;
-                    text-transform: uppercase;
-                    padding-left: 20px;
+            .buttons {
+                height: 83px;
+                width: 130px;
+                float: right;
+                padding: 0 10px;
+
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+                    height: 100%;
 
                     li {
+                        width: 50%;
+                        height: 100%;
+                        float: left;
+                        list-style: none;
 
                         a {
                             display: block;
-                            margin-left: 0px;
-                            padding: 0 13.5px;
-                            color: white;
-                            font-size: 13px;
-                            letter-spacing: -0.035em;
-                        }
-                    }
-                }
-
-                .buttons {
-                    height: 83px;
-                    width: 130px;
-                    float: right;
-                    padding: 0 10px;
-
-                    ul {
-                        margin: 0;
-                        padding: 0;
-                        width: 100%;
-                        height: 100%;
-
-                        li {
-                            width: 50%;
                             height: 100%;
-                            float: left;
-                            list-style: none;
-
-                            a {
-                                display: block;
-                                height: 100%;
-                                text-align: center;
-                                color: white;
-                                text-transform: uppercase;
-                                font-size: 16px;
-                                margin-top: -2px;
-                                font-weight: 500;
-                                letter-spacing: 0.1em;
-                                text-decoration: none;
-
-                                span {
-                                    border-bottom: 2px solid white;
-                                    padding: 3px 0;
-                                }
-
-                                img {
-                                    width: 75%;
-                                    margin-left: 1%;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-
-            .header-wrap {
-                position: relative;
-                height: 600px;
-                width: 100%;
-                background-image: url(../images/home/bg.jpg);
-                background-size: cover;
-                background-position: center;
-
-                .container {
-                    position: relative;
-                    height: 100%;
-
-                    .slogan {
-                        position: absolute;
-                        background: black;
-                        bottom: 20px;
-                        right: -15px;
-                        height: 110px;
-                        width: 665px;
-                        padding: 0;
-                        margin: 0;
-                        color: white;
-
-                        h1 {
                             text-align: center;
-                            line-height: 25px;
-                            font-size: 28px;
-                            text-transform: uppercase;
-                            margin-top: 30px;
-                            letter-spacing: 0.02em;
-                            padding-right: 19px;
-                        }
-                    }
-
-                    .slogan:before {
-                        display: block;
-                        content: '';
-                        position: absolute;
-                        right: -100%;
-                        width: 100%;
-                        height: 110px;
-                        background: black;
-
-                    }
-                }
-
-                .nav-fixed {
-                    position: fixed;
-                    top: 0;
-                    bottom: 50px;
-                    left: 0;
-                    margin: auto;
-                    width: 52px;
-                    height: 325px;
-                    z-index: 500;
-
-                    ul {
-                        margin: 0;
-                        padding: 0;
-
-                        li {
-                            list-style: none;
-                            height: 53px;
-                            width: 52px;
-                            margin-bottom: 1px;
-
-                            a {
-                                position: relative;
-                                display: block;
-                                width: 52px;
-                                height: 53px;
-                                overflow: hidden;
-                                transition: 0.5s;
-
-                                .icon {
-                                    position: relative;
-                                    float: right;
-                                    display: block;
-                                    width: 52px;
-                                    height: 53px;
-                                    background: black;
-                                    margin-bottom: 1px;
-                                    z-index: 100;
-
-                                    img {
-                                        position: absolute;
-                                        top: 0;
-                                        left: 0;
-                                        right: 0;
-                                        bottom: 0;
-                                        margin: auto;
-                                        width: 50%;
-                                    }
-                                }
-
-                                .text {
-                                    display: block;
-                                    width: 280px;
-                                    text-align: center;
-                                    padding-right: 52px;
-                                    line-height: 52px;
-                                    height: 100%;
-                                    position: absolute;
-                                    top: 0;
-                                    left: 0;
-                                    z-index: -1;
-                                    background: #e0e0e0;
-                                    text-transform: uppercase;
-                                    color: black;
-                                    font-weight: 100;
-                                    font-size: 13px;
-                                    letter-spacing: 0.035em;
-                                }
-                            }
-                        }
-
-                        li:hover a {
-                            width: 280px;
-                        }
-                    }
-                }
-
-                label[for=feedback] {
-                    position: fixed;
-                    top: 50%;
-                    right: 0;
-                    background: black;
-                    color: white;
-                    line-height: 35px;
-                    font-size: 15px;
-                    text-transform: uppercase;
-                    margin-top: -220px;
-                    width: 220px;
-                    height: 30px;
-                    transform: rotate(-90deg);
-                    transform-origin: 100% 100%;
-                    text-align: center;
-                    cursor: pointer;
-                    z-index: 1001;
-                }
-
-                .form {
-                    position: fixed;
-                    top: 0;
-                    bottom: 80px;
-                    margin: auto;
-                    right: 60px;
-                    width: 230px;
-                    height: 360px;
-                    background: white;
-                    border-radius: 10px;
-                    overflow: hidden;
-                    z-index: 100;
-
-                    .form-head {
-                        display: block;
-                        height: 30px;
-                        background: black;
-                        text-align: center;
-                        line-height: 30px;
-                        text-transform: uppercase;
-                        color: white;
-                        font-size: 12px;
-                        letter-spacing: 0.01em;
-                        padding-right: 6px;
-                    }
-
-                    p {
-                        padding: 7px 0 0 10px;
-                        font-size: 12px;
-                        line-height: 15px;
-                        letter-spacing: 0.022em;
-                    }
-
-                    form {
-                        padding-top: 6px;
-
-                        .obligatory {
-                            position: relative;
-                            padding-right: 45px;
-
-                            input {
-                                position: relative;
-                                margin: 0 29px;
-                                width: 100%;
-                                border: none;
-                                border-bottom: 1px solid #969696;
-                                padding: 0;
-                                line-height: 20px;
-                                font-size: 12px;
-                                margin-top: 24px;
-                                padding-left: 0px;
-                            }
-                        }
-
-                        .obligatory:first-child input {
-                            margin-top: 0;
-                        }
-
-                        .obligatory:after {
-                            position: absolute;
-                            content: '*';
-                            color: red;
-                            display: block;
-                            bottom: -5px;
-                            left: 15px;
-                        }
-
-                        .not-obligatory {
-                            padding: 13px 30px;
-
-                            label {
-                                line-height: 20px;
-                                font-size: 12px;
-                                letter-spacing: 0.022em;
-                                margin: 0;
-                                padding: 0;
-                            }
-
-                            textarea {
-                                margin: 0;
-                                padding: 0;
-                                width: 100%;
-                                height: 48px;
-                                margin-top: -3px;
-                                background: rgba(159, 159, 159, 0.7);
-                                resize: none;
-                            }
-                        }
-
-                        input[type=submit] {
-                            border: none;
-                            background: black;
                             color: white;
-                            float: right;
-                            margin-right: 30px;
-                            margin-top: -1px;
-                            height: 20px;
-                            width: 105px;
-                            font-size: 12px;
                             text-transform: uppercase;
-                            font-weight: 700;
+                            font-size: 16px;
+                            margin-top: -2px;
+                            font-weight: 500;
+                            letter-spacing: 0.1em;
+                            text-decoration: none;
+
+                            span {
+                                border-bottom: 2px solid white;
+                                padding: 3px 0;
+                            }
+
+                            img {
+                                width: 75%;
+                                margin-left: 1%;
+                            }
                         }
                     }
-                }
-
-                #feedback {
-                    display: none;
-                }
-
-                #feedback:checked + .form {
-                    display: block;
-                }
-
-                #feedback:not(:checked) + .form {
-                    display: none;
                 }
             }
         }
+
+
+        .header-wrap {
+            position: relative;
+            height: 600px;
+            width: 100%;
+            background-image: url(../images/home/bg.jpg);
+            background-size: cover;
+            background-position: center;
+
+            .container {
+                position: relative;
+                height: 100%;
+
+                .slogan {
+                    position: absolute;
+                    background: black;
+                    bottom: 20px;
+                    right: -15px;
+                    height: 110px;
+                    width: 665px;
+                    padding: 0;
+                    margin: 0;
+                    color: white;
+
+                    h1 {
+                        text-align: center;
+                        line-height: 25px;
+                        font-size: 28px;
+                        text-transform: uppercase;
+                        margin-top: 30px;
+                        letter-spacing: 0.02em;
+                        padding-right: 19px;
+                    }
+                }
+
+                .slogan:before {
+                    display: block;
+                    content: '';
+                    position: absolute;
+                    right: -100%;
+                    width: 100%;
+                    height: 110px;
+                    background: black;
+
+                }
+            }
+
+            .nav-fixed {
+                position: fixed;
+                top: 0;
+                bottom: 50px;
+                left: 0;
+                margin: auto;
+                width: 52px;
+                height: 325px;
+                z-index: 500;
+
+                ul {
+                    margin: 0;
+                    padding: 0;
+
+                    li {
+                        list-style: none;
+                        height: 53px;
+                        width: 52px;
+                        margin-bottom: 1px;
+
+                        a {
+                            position: relative;
+                            display: block;
+                            width: 52px;
+                            height: 53px;
+                            overflow: hidden;
+                            transition: 0.5s;
+
+                            .icon {
+                                position: relative;
+                                float: right;
+                                display: block;
+                                width: 52px;
+                                height: 53px;
+                                background: black;
+                                margin-bottom: 1px;
+                                z-index: 100;
+
+                                img {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                    margin: auto;
+                                    width: 50%;
+                                }
+                            }
+
+                            .text {
+                                display: block;
+                                width: 280px;
+                                text-align: center;
+                                padding-right: 52px;
+                                line-height: 52px;
+                                height: 100%;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                z-index: -1;
+                                background: #e0e0e0;
+                                text-transform: uppercase;
+                                color: black;
+                                font-weight: 100;
+                                font-size: 13px;
+                                letter-spacing: 0.035em;
+                            }
+                        }
+                    }
+
+                    li:hover a {
+                        width: 280px;
+                    }
+                }
+            }
+        }
+    }
+
+    section#catalogs {
+
+        .container {
+            height: 100%;
+
+            .wrap-content {
+                width: 100%;
+                height: 100%;
+                padding: 210px 175px 210px 180px;
+                letter-spacing: 0.035em;
+
+                a {
+                    display: block;
+                    width: 300px;
+                    height: 44px;
+                    background: black;
+                    margin-top: 66px;
+                    text-align: center;
+                    line-height: 44px;
+                    text-transform: uppercase;
+                    color: white;
+                    font-size: 18px;
+                    text-decoration: none;
+                }
+            }
+        }
+
+
+    }
+
+    section#developments {
+
+        .container {
+            width: 100%;
+            height: 100%;
+
+            .wrap-content {
+                width: 100%;
+                height: 100%;
+                padding: 50px 45px 90px 180px;
+
+                .row {
+                    height: 100%;
+
+                    .col {
+                        height: 100%;
+
+                        .post {
+                            width: 100%;
+                            height: 480px;
+                            margin-top: 80px;
+                            padding: 5px 0 0 5px;
+
+                            .img {
+                                width: 100%;
+                                height: 340px;
+                                background: #e3e3e3;
+                            }
+
+                            .header {
+                                overflow: hidden;
+                                height: 50px;
+
+                                span:first-child {
+                                    display: block;
+                                    float: left;
+                                    width: 420px;
+                                    font-size: 26px;
+                                    font-weight: 900;
+                                    line-height: 70px;
+                                    letter-spacing: 0.35px;
+                                }
+
+                                span:last-child {
+                                    display: block;
+                                    float: right;
+                                    width: 85px;
+                                    line-height: 70px;
+                                    letter-spacing: 0.35px;
+                                }
+                            }
+
+                            .description {
+                                width: 100%;
+                                height: 60px;
+                                padding-top: 9px;
+                                letter-spacing: 0.65px;
+                            }
+
+                            a {
+                                font-family: Arial;
+                                font-style: italic;
+                                font-size: 18px;
+                                text-transform: lowercase;
+                                color: #7849ec;
+                                font-weight: 100;
+                            }
+                        }
+
+                        .wrap-list {
+                            width: 100%;
+                            height: 100%;
+                            padding-left: 45px;
+
+                            ul {
+                                display: block;
+                                border-left: 1px solid #d0d0d0;
+                                border-right: 1px solid black;
+                                padding: 0;
+                                margin: 0;
+                                height: 100%;
+                                padding: 15px 42px 0px 48px;
+                                overflow-y: scroll;
+                                overflow-x: hidden;
+
+                                li {
+                                    display: block;
+                                    list-style: none;
+                                    width: 243px;
+                                    height: 175px;
+                                    margin-bottom: 10px;
+
+                                    .img {
+                                        width: 100%;
+                                        height: 133px;
+                                        background: #e3e3e3;
+                                    }
+
+                                    .header {
+                                        background: green;
+                                        line-height: 40px;
+
+                                        span:first-child {
+                                            display: block;
+                                            float: left;
+                                            width: 160px;
+                                            font-weight: 900;
+                                        }
+
+                                        span:last-child {
+                                            display: block;
+                                            float: right;
+                                            width: 80px;
+                                            font-size: 15px;
+                                            text-align: right;
+                                        }
+                                    }
+                                }
+                            }
+
+                            ul::-webkit-scrollbar {
+                                width: 2px;
+                            }
+
+                            ul::-webkit-scrollbar-thumb {
+                                background-color: black;
+                                outline: 1px solid slategrey;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+    }
+
+    section#contacts {
+
+        .container {
+            width: 100%;
+            height: 100%;
+
+            .wrap-content {
+                width: 100%;
+                height: 100%;
+                padding: 130px 100px 100px 110px;
+
+                .row {
+                    height: 100%;
+
+                    .col {
+                        height: 100%;
+
+                        .info {
+                            width: 100%;
+                            height: 190px;
+
+                            span {
+                                display: block;
+                                padding: 0px 30px 15px 70px;
+                                font-size: 26px;
+                                letter-spacing: 0.35px;
+                                margin-bottom: 10px;
+                            }
+
+                            span:nth-child(2) {
+                                font-size: 18px;
+                                letter-spacing: 0.2px;
+                            }
+
+                            span:nth-child(3) {
+                                font-size: 18px;
+                                letter-spacing: 0px;
+                                margin-top: 21px;
+                            }
+                        }
+
+                        .map {
+                            width: 100%;
+                            height: 290px;
+                            background: green;
+                        }
+
+
+                        .form {
+                            position: relative;
+                            width: 100%;
+                            right: 0;
+                            background: none;
+                            padding-top: 3px;
+
+                            input {
+                                background: none;
+                                margin: 0 23px 27px 23px;
+                                font-size: 13px;
+                                color: black;
+                            }
+
+                            input::-moz-placeholder {
+                                color: black;
+                            }
+
+                            input::-webkit-input-placeholder {
+                                color: black;
+                            }
+
+                            input:-ms-input-placeholder {
+                                color: black;
+                            }
+
+                            input::-ms-input-placeholder {
+                                color: black;
+                            }
+
+                            input::placeholder {
+                                color: black;
+                            }
+
+                            .obligatory:after {
+                                display: none;
+                            }
+                            .not-obligatory{
+                                padding: 13px 0 13px 20px;
+                                
+                                textarea{
+                                    background: #f5f5e9;
+                                    border: none;
+                                    height: 60px;
+                                    margin-top: 3px;
+                                    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.24);
+                                }
+                            }
+                            input[type=submit]{
+                                margin-right: 0;
+                                color: white;
+                                background: black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        background: black;
+        width: 100%;
+        height: 100px;
     }
 }
 
 /*MIN-WIDTH FIXED*/
 .container {
-    min-width: 1200px;
+    position: relative;
+    min-width: $min-width;
+}
+
+#order {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1000;
+
+    .shadow {
+        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .6);
+    }
+
+    .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 525px;
+        height: 545px;
+        background: red;
+
+        .header {
+            width: 100%;
+            height: 65px;
+            background: black;
+            line-height: 70px;
+            padding: 0 38px;
+            font-size: 18px;
+            letter-spacing: 0.015em;
+            color: white;
+        }
+    }
+}
+
+#order:target {
+    display: block;
+}
+
+
+label[for=feedback] {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    background: black;
+    color: white;
+    line-height: 35px;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-top: -220px;
+    width: 220px;
+    height: 30px;
+    transform: rotate(-90deg);
+    transform-origin: 100% 100%;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.form {
+    position: fixed;
+    top: 0;
+    bottom: 80px;
+    margin: auto;
+    right: 60px;
+    width: 230px;
+    height: 360px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 100;
+
+    .form-head {
+        display: block;
+        height: 30px;
+        background: black;
+        text-align: center;
+        line-height: 30px;
+        text-transform: uppercase;
+        color: white;
+        font-size: 12px;
+        letter-spacing: 0.01em;
+        padding-right: 6px;
+    }
+
+    p {
+        padding: 7px 0 0 10px;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 0.022em;
+    }
+
+    form {
+        padding-top: 6px;
+
+        .obligatory {
+            position: relative;
+            padding-right: 45px;
+
+            input {
+                position: relative;
+                margin: 0 29px;
+                width: 100%;
+                border: none;
+                border-bottom: 1px solid #969696;
+                padding: 0;
+                line-height: 20px;
+                font-size: 12px;
+                margin-top: 24px;
+                padding-left: 0px;
+            }
+        }
+
+        .obligatory:first-child input {
+            margin-top: 0;
+        }
+
+        .obligatory:after {
+            position: absolute;
+            content: '*';
+            display: block;
+            bottom: -5px;
+            left: 15px;
+        }
+
+        .not-obligatory {
+            padding: 13px 30px;
+
+            label {
+                line-height: 20px;
+                font-size: 12px;
+                letter-spacing: 0.022em;
+                margin: 0;
+                padding: 0;
+            }
+
+            textarea {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 48px;
+                margin-top: -3px;
+                background: rgba(159, 159, 159, 0.7);
+                resize: none;
+            }
+        }
+
+        input[type=submit] {
+            border: none;
+            background: black;
+            color: white;
+            float: right;
+            margin-right: 30px;
+            margin-top: -1px;
+            height: 20px;
+            width: 105px;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+    }
+}
+
+#feedback {
+    display: none;
+}
+
+#feedback:checked + .form {
+    display: block;
+}
+
+#feedback:not(:checked) + .form {
+    display: none;
 }

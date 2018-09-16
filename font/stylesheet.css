@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Aeroport';
+    src: url('Aeroport.eot');
+    src: url('Aeroport.eot?#iefix') format('embedded-opentype'),
+        url('Aeroport.woff2') format('woff2'),
+        url('Aeroport.woff') format('woff'),
+        url('Aeroport.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+

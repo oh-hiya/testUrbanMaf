@@ -1,22 +1,89 @@
-/* line 1, ../sass/style.scss */
+/* line 3, ../sass/style.scss */
 body {
   padding: 0;
   margin: 0;
+  font-family: 'Aeroport';
+  font-weight: normal;
+  font-style: normal;
 }
-/* line 7, ../sass/style.scss */
-body #wrap section#header {
+/* line 12, ../sass/style.scss */
+body section:not(#header) {
+  min-width: 1200px;
+  position: relative;
+  background: white;
+  height: 705px;
+  width: 100%;
+  padding-bottom: 0px;
+}
+/* line 20, ../sass/style.scss */
+body section:not(#header) h2.header {
+  position: relative;
+  background: yellow;
+  width: 320px;
+  height: 45px;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  text-transform: uppercase;
+  font-size: 22px;
+  text-align: right;
+  line-height: 45px;
+  padding-right: 60px;
+  background: black;
+  color: white;
+  font-weight: 100;
+}
+/* line 38, ../sass/style.scss */
+body section:not(#header) h2:after {
+  position: absolute;
+  top: 0;
+  right: 100%;
+  content: '';
+  display: block;
+  height: 45px;
+  width: 500px;
+  background: black;
+}
+/* line 49, ../sass/style.scss */
+body section:not(#header) h2:before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: -25px;
+  transform: rotate(-40deg);
+  width: 100px;
+  height: 7px;
+  background: white;
+}
+/* line 61, ../sass/style.scss */
+body section:not(#header) .container:before {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 140px;
+  width: 100px;
+  height: 700px;
+  background-image: url(../images/background-logo.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+}
+/* line 76, ../sass/style.scss */
+body section#header {
   min-width: 1200px;
   overflow: hidden;
 }
-/* line 11, ../sass/style.scss */
-body #wrap section#header .nav-wrap {
+/* line 80, ../sass/style.scss */
+body section#header .nav-wrap {
   background: black;
   width: 100%;
   height: 83px;
   line-height: 83px;
 }
-/* line 17, ../sass/style.scss */
-body #wrap section#header .nav-wrap #logo {
+/* line 86, ../sass/style.scss */
+body section#header .nav-wrap #logo {
   display: block;
   width: 300px;
   height: 83px;
@@ -28,14 +95,14 @@ body #wrap section#header .nav-wrap #logo {
   background-size: 250px;
   background-position: center;
 }
-/* line 31, ../sass/style.scss */
-body #wrap section#header .nav-wrap .nav {
+/* line 100, ../sass/style.scss */
+body section#header .nav-wrap .nav {
   float: left;
   text-transform: uppercase;
   padding-left: 20px;
 }
-/* line 38, ../sass/style.scss */
-body #wrap section#header .nav-wrap .nav li a {
+/* line 107, ../sass/style.scss */
+body section#header .nav-wrap .nav li a {
   display: block;
   margin-left: 0px;
   padding: 0 13.5px;
@@ -43,29 +110,29 @@ body #wrap section#header .nav-wrap .nav li a {
   font-size: 13px;
   letter-spacing: -0.035em;
 }
-/* line 49, ../sass/style.scss */
-body #wrap section#header .nav-wrap .buttons {
+/* line 118, ../sass/style.scss */
+body section#header .nav-wrap .buttons {
   height: 83px;
   width: 130px;
   float: right;
   padding: 0 10px;
 }
-/* line 55, ../sass/style.scss */
-body #wrap section#header .nav-wrap .buttons ul {
+/* line 124, ../sass/style.scss */
+body section#header .nav-wrap .buttons ul {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
 }
-/* line 61, ../sass/style.scss */
-body #wrap section#header .nav-wrap .buttons ul li {
+/* line 130, ../sass/style.scss */
+body section#header .nav-wrap .buttons ul li {
   width: 50%;
   height: 100%;
   float: left;
   list-style: none;
 }
-/* line 67, ../sass/style.scss */
-body #wrap section#header .nav-wrap .buttons ul li a {
+/* line 136, ../sass/style.scss */
+body section#header .nav-wrap .buttons ul li a {
   display: block;
   height: 100%;
   text-align: center;
@@ -77,18 +144,18 @@ body #wrap section#header .nav-wrap .buttons ul li a {
   letter-spacing: 0.1em;
   text-decoration: none;
 }
-/* line 79, ../sass/style.scss */
-body #wrap section#header .nav-wrap .buttons ul li a span {
+/* line 148, ../sass/style.scss */
+body section#header .nav-wrap .buttons ul li a span {
   border-bottom: 2px solid white;
   padding: 3px 0;
 }
-/* line 84, ../sass/style.scss */
-body #wrap section#header .nav-wrap .buttons ul li a img {
+/* line 153, ../sass/style.scss */
+body section#header .nav-wrap .buttons ul li a img {
   width: 75%;
   margin-left: 1%;
 }
-/* line 95, ../sass/style.scss */
-body #wrap section#header .header-wrap {
+/* line 164, ../sass/style.scss */
+body section#header .header-wrap {
   position: relative;
   height: 600px;
   width: 100%;
@@ -96,13 +163,13 @@ body #wrap section#header .header-wrap {
   background-size: cover;
   background-position: center;
 }
-/* line 103, ../sass/style.scss */
-body #wrap section#header .header-wrap .container {
+/* line 172, ../sass/style.scss */
+body section#header .header-wrap .container {
   position: relative;
   height: 100%;
 }
-/* line 107, ../sass/style.scss */
-body #wrap section#header .header-wrap .container .slogan {
+/* line 176, ../sass/style.scss */
+body section#header .header-wrap .container .slogan {
   position: absolute;
   background: black;
   bottom: 20px;
@@ -113,8 +180,8 @@ body #wrap section#header .header-wrap .container .slogan {
   margin: 0;
   color: white;
 }
-/* line 118, ../sass/style.scss */
-body #wrap section#header .header-wrap .container .slogan h1 {
+/* line 187, ../sass/style.scss */
+body section#header .header-wrap .container .slogan h1 {
   text-align: center;
   line-height: 25px;
   font-size: 28px;
@@ -123,8 +190,8 @@ body #wrap section#header .header-wrap .container .slogan h1 {
   letter-spacing: 0.02em;
   padding-right: 19px;
 }
-/* line 129, ../sass/style.scss */
-body #wrap section#header .header-wrap .container .slogan:before {
+/* line 198, ../sass/style.scss */
+body section#header .header-wrap .container .slogan:before {
   display: block;
   content: '';
   position: absolute;
@@ -133,8 +200,8 @@ body #wrap section#header .header-wrap .container .slogan:before {
   height: 110px;
   background: black;
 }
-/* line 141, ../sass/style.scss */
-body #wrap section#header .header-wrap .nav-fixed {
+/* line 210, ../sass/style.scss */
+body section#header .header-wrap .nav-fixed {
   position: fixed;
   top: 0;
   bottom: 50px;
@@ -144,20 +211,20 @@ body #wrap section#header .header-wrap .nav-fixed {
   height: 325px;
   z-index: 500;
 }
-/* line 151, ../sass/style.scss */
-body #wrap section#header .header-wrap .nav-fixed ul {
+/* line 220, ../sass/style.scss */
+body section#header .header-wrap .nav-fixed ul {
   margin: 0;
   padding: 0;
 }
-/* line 155, ../sass/style.scss */
-body #wrap section#header .header-wrap .nav-fixed ul li {
+/* line 224, ../sass/style.scss */
+body section#header .header-wrap .nav-fixed ul li {
   list-style: none;
   height: 53px;
   width: 52px;
   margin-bottom: 1px;
 }
-/* line 161, ../sass/style.scss */
-body #wrap section#header .header-wrap .nav-fixed ul li a {
+/* line 230, ../sass/style.scss */
+body section#header .header-wrap .nav-fixed ul li a {
   position: relative;
   display: block;
   width: 52px;
@@ -165,8 +232,8 @@ body #wrap section#header .header-wrap .nav-fixed ul li a {
   overflow: hidden;
   transition: 0.5s;
 }
-/* line 169, ../sass/style.scss */
-body #wrap section#header .header-wrap .nav-fixed ul li a .icon {
+/* line 238, ../sass/style.scss */
+body section#header .header-wrap .nav-fixed ul li a .icon {
   position: relative;
   float: right;
   display: block;
@@ -176,8 +243,8 @@ body #wrap section#header .header-wrap .nav-fixed ul li a .icon {
   margin-bottom: 1px;
   z-index: 100;
 }
-/* line 179, ../sass/style.scss */
-body #wrap section#header .header-wrap .nav-fixed ul li a .icon img {
+/* line 248, ../sass/style.scss */
+body section#header .header-wrap .nav-fixed ul li a .icon img {
   position: absolute;
   top: 0;
   left: 0;
@@ -186,8 +253,8 @@ body #wrap section#header .header-wrap .nav-fixed ul li a .icon img {
   margin: auto;
   width: 50%;
 }
-/* line 190, ../sass/style.scss */
-body #wrap section#header .header-wrap .nav-fixed ul li a .text {
+/* line 259, ../sass/style.scss */
+body section#header .header-wrap .nav-fixed ul li a .text {
   display: block;
   width: 280px;
   text-align: center;
@@ -205,12 +272,342 @@ body #wrap section#header .header-wrap .nav-fixed ul li a .text {
   font-size: 13px;
   letter-spacing: 0.035em;
 }
-/* line 211, ../sass/style.scss */
-body #wrap section#header .header-wrap .nav-fixed ul li:hover a {
+/* line 280, ../sass/style.scss */
+body section#header .header-wrap .nav-fixed ul li:hover a {
   width: 280px;
 }
-/* line 217, ../sass/style.scss */
-body #wrap section#header .header-wrap label[for=feedback] {
+/* line 290, ../sass/style.scss */
+body section#catalogs .container {
+  height: 100%;
+}
+/* line 293, ../sass/style.scss */
+body section#catalogs .container .wrap-content {
+  width: 100%;
+  height: 100%;
+  padding: 210px 175px 210px 180px;
+  letter-spacing: 0.035em;
+}
+/* line 299, ../sass/style.scss */
+body section#catalogs .container .wrap-content a {
+  display: block;
+  width: 300px;
+  height: 44px;
+  background: black;
+  margin-top: 66px;
+  text-align: center;
+  line-height: 44px;
+  text-transform: uppercase;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+/* line 320, ../sass/style.scss */
+body section#developments .container {
+  width: 100%;
+  height: 100%;
+}
+/* line 324, ../sass/style.scss */
+body section#developments .container .wrap-content {
+  width: 100%;
+  height: 100%;
+  padding: 50px 45px 90px 180px;
+}
+/* line 329, ../sass/style.scss */
+body section#developments .container .wrap-content .row {
+  height: 100%;
+}
+/* line 332, ../sass/style.scss */
+body section#developments .container .wrap-content .row .col {
+  height: 100%;
+}
+/* line 335, ../sass/style.scss */
+body section#developments .container .wrap-content .row .col .post {
+  width: 100%;
+  height: 480px;
+  margin-top: 80px;
+  padding: 5px 0 0 5px;
+}
+/* line 341, ../sass/style.scss */
+body section#developments .container .wrap-content .row .col .post .img {
+  width: 100%;
+  height: 340px;
+  background: #e3e3e3;
+}
+/* line 347, ../sass/style.scss */
+body section#developments .container .wrap-content .row .col .post .header {
+  overflow: hidden;
+  height: 50px;
+}
+/* line 351, ../sass/style.scss */
+body section#developments .container .wrap-content .row .col .post .header span:first-child {
+  display: block;
+  float: left;
+  width: 420px;
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 70px;
+  letter-spacing: 0.35px;
+}
+/* line 361, ../sass/style.scss */
+body section#developments .container .wrap-content .row .col .post .header span:last-child {
+  display: block;
+  float: right;
+  width: 85px;
+  line-height: 70px;
+  letter-spacing: 0.35px;
+}
+/* line 370, ../sass/style.scss */
+body section#developments .container .wrap-content .row .col .post .description {
+  width: 100%;
+  height: 60px;
+  padding-top: 9px;
+  letter-spacing: 0.65px;
+}
+/* line 377, ../sass/style.scss */
+body section#developments .container .wrap-content .row .col .post a {
+  font-family: Arial;
+  font-style: italic;
+  font-size: 18px;
+  text-transform: lowercase;
+  color: #7849ec;
+  font-weight: 100;
+}
+/* line 387, ../sass/style.scss */
+body section#developments .container .wrap-content .row .col .wrap-list {
+  width: 100%;
+  height: 100%;
+  padding-left: 45px;
+}
+/* line 392, ../sass/style.scss */
+body section#developments .container .wrap-content .row .col .wrap-list ul {
+  display: block;
+  border-left: 1px solid #d0d0d0;
+  border-right: 1px solid black;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  padding: 15px 42px 0px 48px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+/* line 403, ../sass/style.scss */
+body section#developments .container .wrap-content .row .col .wrap-list ul li {
+  display: block;
+  list-style: none;
+  width: 243px;
+  height: 175px;
+  margin-bottom: 10px;
+}
+/* line 410, ../sass/style.scss */
+body section#developments .container .wrap-content .row .col .wrap-list ul li .img {
+  width: 100%;
+  height: 133px;
+  background: #e3e3e3;
+}
+/* line 416, ../sass/style.scss */
+body section#developments .container .wrap-content .row .col .wrap-list ul li .header {
+  background: green;
+  line-height: 40px;
+}
+/* line 420, ../sass/style.scss */
+body section#developments .container .wrap-content .row .col .wrap-list ul li .header span:first-child {
+  display: block;
+  float: left;
+  width: 160px;
+  font-weight: 900;
+}
+/* line 427, ../sass/style.scss */
+body section#developments .container .wrap-content .row .col .wrap-list ul li .header span:last-child {
+  display: block;
+  float: right;
+  width: 80px;
+  font-size: 15px;
+  text-align: right;
+}
+/* line 438, ../sass/style.scss */
+body section#developments .container .wrap-content .row .col .wrap-list ul::-webkit-scrollbar {
+  width: 2px;
+}
+/* line 442, ../sass/style.scss */
+body section#developments .container .wrap-content .row .col .wrap-list ul::-webkit-scrollbar-thumb {
+  background-color: black;
+  outline: 1px solid slategrey;
+}
+/* line 458, ../sass/style.scss */
+body section#contacts .container {
+  width: 100%;
+  height: 100%;
+}
+/* line 462, ../sass/style.scss */
+body section#contacts .container .wrap-content {
+  width: 100%;
+  height: 100%;
+  padding: 130px 100px 100px 110px;
+}
+/* line 467, ../sass/style.scss */
+body section#contacts .container .wrap-content .row {
+  height: 100%;
+}
+/* line 470, ../sass/style.scss */
+body section#contacts .container .wrap-content .row .col {
+  height: 100%;
+}
+/* line 473, ../sass/style.scss */
+body section#contacts .container .wrap-content .row .col .info {
+  width: 100%;
+  height: 190px;
+}
+/* line 477, ../sass/style.scss */
+body section#contacts .container .wrap-content .row .col .info span {
+  display: block;
+  padding: 0px 30px 15px 70px;
+  font-size: 26px;
+  letter-spacing: 0.35px;
+  margin-bottom: 10px;
+}
+/* line 485, ../sass/style.scss */
+body section#contacts .container .wrap-content .row .col .info span:nth-child(2) {
+  font-size: 18px;
+  letter-spacing: 0.2px;
+}
+/* line 490, ../sass/style.scss */
+body section#contacts .container .wrap-content .row .col .info span:nth-child(3) {
+  font-size: 18px;
+  letter-spacing: 0px;
+  margin-top: 21px;
+}
+/* line 497, ../sass/style.scss */
+body section#contacts .container .wrap-content .row .col .map {
+  width: 100%;
+  height: 290px;
+  background: green;
+}
+/* line 504, ../sass/style.scss */
+body section#contacts .container .wrap-content .row .col .form {
+  position: relative;
+  width: 100%;
+  right: 0;
+  background: none;
+  padding-top: 3px;
+}
+/* line 511, ../sass/style.scss */
+body section#contacts .container .wrap-content .row .col .form input {
+  background: none;
+  margin: 0 23px 27px 23px;
+  font-size: 13px;
+  color: black;
+}
+/* line 518, ../sass/style.scss */
+body section#contacts .container .wrap-content .row .col .form input::-moz-placeholder {
+  color: black;
+}
+/* line 522, ../sass/style.scss */
+body section#contacts .container .wrap-content .row .col .form input::-webkit-input-placeholder {
+  color: black;
+}
+/* line 526, ../sass/style.scss */
+body section#contacts .container .wrap-content .row .col .form input:-ms-input-placeholder {
+  color: black;
+}
+/* line 530, ../sass/style.scss */
+body section#contacts .container .wrap-content .row .col .form input::-ms-input-placeholder {
+  color: black;
+}
+/* line 534, ../sass/style.scss */
+body section#contacts .container .wrap-content .row .col .form input::placeholder {
+  color: black;
+}
+/* line 538, ../sass/style.scss */
+body section#contacts .container .wrap-content .row .col .form .obligatory:after {
+  display: none;
+}
+/* line 541, ../sass/style.scss */
+body section#contacts .container .wrap-content .row .col .form .not-obligatory {
+  padding: 13px 0 13px 20px;
+}
+/* line 544, ../sass/style.scss */
+body section#contacts .container .wrap-content .row .col .form .not-obligatory textarea {
+  background: #f5f5e9;
+  border: none;
+  height: 60px;
+  margin-top: 3px;
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.24);
+}
+/* line 552, ../sass/style.scss */
+body section#contacts .container .wrap-content .row .col .form input[type=submit] {
+  margin-right: 0;
+  color: white;
+  background: black;
+}
+/* line 564, ../sass/style.scss */
+body footer {
+  background: black;
+  width: 100%;
+  height: 100px;
+}
+
+/*MIN-WIDTH FIXED*/
+/* line 572, ../sass/style.scss */
+.container {
+  position: relative;
+  min-width: 1200px;
+}
+
+/* line 577, ../sass/style.scss */
+#order {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 1000;
+}
+/* line 587, ../sass/style.scss */
+#order .shadow {
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+/* line 600, ../sass/style.scss */
+#order .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 525px;
+  height: 545px;
+  background: red;
+}
+/* line 611, ../sass/style.scss */
+#order .content .header {
+  width: 100%;
+  height: 65px;
+  background: black;
+  line-height: 70px;
+  padding: 0 38px;
+  font-size: 18px;
+  letter-spacing: 0.015em;
+  color: white;
+}
+
+/* line 624, ../sass/style.scss */
+#order:target {
+  display: block;
+}
+
+/* line 629, ../sass/style.scss */
+label[for=feedback] {
   position: fixed;
   top: 50%;
   right: 0;
@@ -228,8 +625,9 @@ body #wrap section#header .header-wrap label[for=feedback] {
   cursor: pointer;
   z-index: 1001;
 }
-/* line 236, ../sass/style.scss */
-body #wrap section#header .header-wrap .form {
+
+/* line 648, ../sass/style.scss */
+.form {
   position: fixed;
   top: 0;
   bottom: 80px;
@@ -242,8 +640,8 @@ body #wrap section#header .header-wrap .form {
   overflow: hidden;
   z-index: 100;
 }
-/* line 249, ../sass/style.scss */
-body #wrap section#header .header-wrap .form .form-head {
+/* line 661, ../sass/style.scss */
+.form .form-head {
   display: block;
   height: 30px;
   background: black;
@@ -255,24 +653,24 @@ body #wrap section#header .header-wrap .form .form-head {
   letter-spacing: 0.01em;
   padding-right: 6px;
 }
-/* line 262, ../sass/style.scss */
-body #wrap section#header .header-wrap .form p {
+/* line 674, ../sass/style.scss */
+.form p {
   padding: 7px 0 0 10px;
   font-size: 12px;
   line-height: 15px;
   letter-spacing: 0.022em;
 }
-/* line 269, ../sass/style.scss */
-body #wrap section#header .header-wrap .form form {
+/* line 681, ../sass/style.scss */
+.form form {
   padding-top: 6px;
 }
-/* line 272, ../sass/style.scss */
-body #wrap section#header .header-wrap .form form .obligatory {
+/* line 684, ../sass/style.scss */
+.form form .obligatory {
   position: relative;
   padding-right: 45px;
 }
-/* line 276, ../sass/style.scss */
-body #wrap section#header .header-wrap .form form .obligatory input {
+/* line 688, ../sass/style.scss */
+.form form .obligatory input {
   position: relative;
   margin: 0 29px;
   width: 100%;
@@ -284,33 +682,32 @@ body #wrap section#header .header-wrap .form form .obligatory input {
   margin-top: 24px;
   padding-left: 0px;
 }
-/* line 290, ../sass/style.scss */
-body #wrap section#header .header-wrap .form form .obligatory:first-child input {
+/* line 702, ../sass/style.scss */
+.form form .obligatory:first-child input {
   margin-top: 0;
 }
-/* line 294, ../sass/style.scss */
-body #wrap section#header .header-wrap .form form .obligatory:after {
+/* line 706, ../sass/style.scss */
+.form form .obligatory:after {
   position: absolute;
   content: '*';
-  color: red;
   display: block;
   bottom: -5px;
   left: 15px;
 }
-/* line 303, ../sass/style.scss */
-body #wrap section#header .header-wrap .form form .not-obligatory {
+/* line 714, ../sass/style.scss */
+.form form .not-obligatory {
   padding: 13px 30px;
 }
-/* line 306, ../sass/style.scss */
-body #wrap section#header .header-wrap .form form .not-obligatory label {
+/* line 717, ../sass/style.scss */
+.form form .not-obligatory label {
   line-height: 20px;
   font-size: 12px;
   letter-spacing: 0.022em;
   margin: 0;
   padding: 0;
 }
-/* line 314, ../sass/style.scss */
-body #wrap section#header .header-wrap .form form .not-obligatory textarea {
+/* line 725, ../sass/style.scss */
+.form form .not-obligatory textarea {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -319,8 +716,8 @@ body #wrap section#header .header-wrap .form form .not-obligatory textarea {
   background: rgba(159, 159, 159, 0.7);
   resize: none;
 }
-/* line 325, ../sass/style.scss */
-body #wrap section#header .header-wrap .form form input[type=submit] {
+/* line 736, ../sass/style.scss */
+.form form input[type=submit] {
   border: none;
   background: black;
   color: white;
@@ -333,21 +730,18 @@ body #wrap section#header .header-wrap .form form input[type=submit] {
   text-transform: uppercase;
   font-weight: 700;
 }
-/* line 341, ../sass/style.scss */
-body #wrap section#header .header-wrap #feedback {
-  display: none;
-}
-/* line 345, ../sass/style.scss */
-body #wrap section#header .header-wrap #feedback:checked + .form {
-  display: block;
-}
-/* line 349, ../sass/style.scss */
-body #wrap section#header .header-wrap #feedback:not(:checked) + .form {
+
+/* line 752, ../sass/style.scss */
+#feedback {
   display: none;
 }
 
-/*MIN-WIDTH FIXED*/
-/* line 358, ../sass/style.scss */
-.container {
-  min-width: 1200px;
+/* line 756, ../sass/style.scss */
+#feedback:checked + .form {
+  display: block;
+}
+
+/* line 760, ../sass/style.scss */
+#feedback:not(:checked) + .form {
+  display: none;
 }

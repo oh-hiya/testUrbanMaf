@@ -174,7 +174,7 @@
                 <h2 class="header">
                     События
                 </h2>
-                
+
                 <div class="wrap-content">
                     <div class="row">
                         <div class="col col-sm-7">
@@ -232,7 +232,7 @@
                             </div>
                         </div>
                     </div>
-                </div>                
+                </div>
             </div>
         </section>
 
@@ -282,9 +282,31 @@
         </section>
 
         <footer>
-
+            <div class="container">
+                <div class="row">
+                    <div class="col col-sm-3">
+                        <a class='open-modal' href="#order">Заказать каталог</a>
+                    </div>
+                    <div class="col col-sm-6">
+                        <span class='info'>
+                            © 2018 Все права защищены "UrbanMAF"
+                        </span>
+                    </div>
+                    <div class="col col-sm-3">
+                        <div class="row social">
+                            <a href="#" style='background-image: url(images/fb.png)'></a>
+                            <a href="#" style='background-image: url(images/in.png)'></a>
+                            <a href="#" style='background-image: url(images/vk.png)'></a>
+                            <a href="#" style='background-image: url(images/yt.png)'></a>
+                        </div>
+                        <div class="phone">
+                            Тел. 8 - 800 - 770 - 05 - 07
+                        </div>
+                    </div>
+                </div>
+            </div>
         </footer>
-        
+
         <!--modal pop-up-->
         <div id="order">
             <a href='#stop' class="shadow"></a>
@@ -292,8 +314,102 @@
                 <div class="header">
                     Заказ каталога
                 </div>
-                
-                
+                <div class="description">
+                    Оформите заявку и мы вышлем Вам нужный каталог удобным для Вас способом.
+                </div>
+                <form action="">
+                    <div class="row">
+                        <div class="col col-sm-6 obligatory">
+                            <input type="text" placeholder="Имя">
+                        </div>
+                        <div class="col col-sm-6 obligatory">
+                            <input type="text" placeholder="Фамилия">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-sm-12 obligatory">
+                            <input type="text" placeholder="Организация">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-sm-6 obligatory">
+                            <input type="email" placeholder="E-mail">
+                        </div>
+                        <div class="col col-sm-6 obligatory">
+                            <input type="number" placeholder="Телефон">
+                        </div>
+                    </div>
+                </form>
+                <div class="wrap-radio">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="radio-head">
+                                Выберите каталог:
+                            </div>
+                            <ul>
+                                <li>
+                                    <label>
+                                        <input type="radio" name="catalogue">
+                                        <span class='fake-button'></span>
+                                        <span class='text'>Такой-то...</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="radio" name="catalogue">
+                                        <span class='fake-button'></span>
+                                        <span class='text'>Такой...</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="radio" name="catalogue">
+                                        <span class='fake-button'></span>
+                                        <span class='text'>Вот этот...</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="radio" name="catalogue">
+                                        <span class='fake-button'></span>
+                                        <span class='text'>И еще этот...</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="radio-head">
+                                Тип каталога:
+                            </div>
+                            <ul>
+                                <li>
+                                    <label>
+                                        <input type="radio" name="type">
+                                        <span class='fake-button'></span>
+                                        <span class='text'>Печатный</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="radio" name="type">
+                                        <span class='fake-button'></span>
+                                        <span class='text'>Электронный</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="condition">
+                            <div class="wrap">
+                                <label>
+                                    <input type="checkbox">
+                                    <span class="fake-check"></span>
+                                    Принимаю условия политики конфидециальности
+                                </label>
+                            </div>
+                        </div>
+                        <input type="submit" value="Отправить">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
